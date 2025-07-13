@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+#keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 15px;
+    flex: 1;
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #666;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    aspect-ratio: 1;
+}
+
+.key:hover {
+    background-color: #777;
+    transform: scale(1.05);
+}
+
+.key:active {
+    transform: scale(0.95);
+}
+
+#clear, #parentheses, #percent, #divide, #multiply, #subtract, #add, #equals {
+    background-color: #ff9500;
+}
+
+#clear, #parentheses, #percent {
+    background-color: #a6a6a6;
+    color: black;
+}
+
+#screen {
+    background-color: #222;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    height: 80px;
+}
+
+#calculator {
+    height: 600px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
